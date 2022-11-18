@@ -18,3 +18,10 @@ console.log(pig_house_parsed.name)
 // read json obj from 1-json.json
 const dataBuffer = fs.readFileSync('1-json.json')
 const dataStr = dataBuffer.toString()
+const dataParse = JSON.parse(dataStr)
+console.log(dataParse)
+
+dataParse.name = "Harry Potter"
+
+const newReader = JSON.stringify(dataParse)
+fs.writeFileSync("1-json.json", newReader)
