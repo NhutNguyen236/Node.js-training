@@ -1,4 +1,5 @@
 const yargs = require("yargs")
+const notes = require("./notes")
 
 console.log(process.argv[2])
 
